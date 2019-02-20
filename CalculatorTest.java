@@ -269,11 +269,29 @@ public class CalculatorTest {
      */
     public void executeTestInvalidTokenLength() throws AssertException
     {
-        // Token length is 0:
-        // TODO: complete this test...
+        try {
+        	Calculator.execute(new String[] {});
+        	Assert.fail("Illegal expression did not throw an Exception");
+        }
+        catch (CalculatorException e) {
+        	
+        }
+        catch (Exception e)
+        {
+            Assert.fail("Unexpected Exception (not CalculatorException) caught");
+        }
 
-        // Token length is > 3:
-        // TODO: complete this test...
+        try {
+        	Calculator.execute(new String[] {"2", "+", "2", "+", "2"});
+        	Assert.fail("Illegal expression did not throw an Exception");
+        }
+        catch (CalculatorException e) {
+        	
+        }
+        catch (Exception e)
+        {
+            Assert.fail("Unexpected Exception (not CalculatorException) caught");
+        }
     }
 
     /**
