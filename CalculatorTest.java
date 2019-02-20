@@ -317,7 +317,17 @@ public class CalculatorTest {
      */
     public void parseAndExecuteTestDivideByZero() throws AssertException
     {
-        // TODO: complete this test...
+        try {
+        	int a = Calculator.calculateThreeTokens(new String[] { });
+        	Assert.fail("Illegal expression did not throw an Exception");
+        }
+        catch (CalculatorException e) {
+        	//Ran with dividing by zero
+        }
+        catch (Exception e)
+        {
+            Assert.fail("Unexpected Exception (not CalculatorException) caught");
+        }
     }
 
     /**
