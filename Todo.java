@@ -22,8 +22,8 @@ Tasks:
 15. Finish parseAndExecuteTestInvalidNumber method in CalculatorTest class.
 16. Finish parseAndExecuteTestInvalidTokenLength method in CalculatorTest class.
 17. Finish parseAndExecuteTestDivideByZero method in CalculatorTest class.
-18. Finish parseAndExecuteTestDivideByZero method in CalculatorTest class.
-19. Finish parseAndExecuteTestDivideByZero method in CalculatorTest class.
+18. Finish parseAndExecuteTestInvalidNumber method in CalculatorTest class.
+19. Finish parseAndExecuteTestInvalidTokenLength method in CalculatorTest class.
 
 Estimated Time (minutes):
 1. 15
@@ -41,10 +41,10 @@ Estimated Time (minutes):
 13. 3
 14. 3
 15. 3
-16. 3
-17. 3
-18. 3
-19. 3
+16. 6
+17. 5
+18. 5
+19. 5
 
 Actual Time (minutes):
 1. 20
@@ -63,7 +63,7 @@ Actual Time (minutes):
 14. 4
 15. 5
 16. 10
-17. 
-18. 
-19. 
+17. 12
+18. 2
+19. 2
 */}
