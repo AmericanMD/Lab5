@@ -54,7 +54,6 @@ public class CalculatorTest {
         }
         catch (NumberFormatException e)
         {
-        	
             // We expect the function to throw a NumberFormatException (from failure of Integer.parseInt)
             // Success; Assert.fail will not be thrown and the code will complete the test, thus succeeding.
         }
@@ -69,7 +68,17 @@ public class CalculatorTest {
      */
     public void calculateTwoTokensTestInvalidCommand() throws AssertException
     {
-       
+    	try {
+        	int result = Calculator.calculateTwoTokens(new String[] {"Potato", "2"});
+        	Assert.fail("Illegal Command has been entered");
+        }
+        catch (CalculatorException e) {
+        	
+        }
+        catch(Exception e) {
+        	Assert.fail(e.getMessage());
+        }
+        
     }
 
     /**
@@ -77,7 +86,19 @@ public class CalculatorTest {
      */
     public void calculateThreeTokensTestValidAdd() throws AssertException
     {
-        // TODO: complete this test...
+    	try {
+        	int result = Calculator.calculateThreeTokens(new String[] {"5", "+", "2"});
+        	Assert.assertEquals(7, result);
+        }
+    	catch (CalculatorException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(NumberFormatException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(ArithmeticException e) {
+        	Assert.fail(e.getMessage());
+        }
     }
 
     /**
@@ -85,7 +106,19 @@ public class CalculatorTest {
      */
     public void calculateThreeTokensTestValidSubtract() throws AssertException
     {
-        // TODO: complete this test...
+    	try {
+        	int result = Calculator.calculateThreeTokens(new String[] {"5", "-", "2"});
+        	Assert.assertEquals(3, result);
+        }
+    	catch (CalculatorException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(NumberFormatException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(ArithmeticException e) {
+        	Assert.fail(e.getMessage());
+        }
     }
 
     /**
@@ -93,7 +126,19 @@ public class CalculatorTest {
      */
     public void calculateThreeTokensTestValidDivide() throws AssertException
     {
-        // TODO: complete this test...
+    	try {
+        	int result = Calculator.calculateThreeTokens(new String[] {"5", "/", "2"});
+        	Assert.assertEquals(2, result);
+        }
+    	catch (CalculatorException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(NumberFormatException e) {
+        	Assert.fail(e.getMessage());
+        }
+        catch(ArithmeticException e) {
+        	Assert.fail(e.getMessage());
+        }
     }
 
     /**
@@ -139,7 +184,12 @@ public class CalculatorTest {
      */
     public void calculateThreeTokensTestInvalidCommand() throws AssertException
     {
-        // TODO: complete this test...
+        try {
+        	Calculator.calculateThreeTokens(new String[] {"5", "+", "foo"});
+        }
+        catch () {
+        	
+        }
     }
 
     /**
