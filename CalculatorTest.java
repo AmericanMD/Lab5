@@ -185,10 +185,15 @@ public class CalculatorTest {
     public void calculateThreeTokensTestInvalidCommand() throws AssertException
     {
         try {
-        	Calculator.calculateThreeTokens(new String[] {"5", "+", "foo"});
+        	Calculator.calculateThreeTokens(new String[] {"5", "%", "2"});
+        	Assert.fail("Illegal argument did not throw an Exception");
         }
-        catch () {
-        	
+        catch (CalculatorException e) {
+        	//Fine
+        }
+        catch (Exception e)
+        {
+            Assert.fail("Unexpected Exception (not NumberFormatException) caught");
         }
     }
 
@@ -197,7 +202,12 @@ public class CalculatorTest {
      */
     public void executeTestValidQuit() throws AssertException
     {
-        // TODO: complete this test...
+        try {
+        	int result = Calculator.execute(new String[] {"quit"});
+        }
+        catch (Exception e){
+        	Assert.fail("Legal expression threw an Exception: " + e.getMessage());
+        }
     }
 
     /**
