@@ -203,7 +203,7 @@ public class Calculator
         	return "Input number cannot be parsed to an int. Please try again.";
         }
         catch(ArithmeticException statementProb) {
-        	return "Attempted to divide by 0. Please try again";
+        	return "Attempted to divide by 0. Please try again.";
         }
         // Hint: you should try and call execute(). If execute encounters an error, it will throw an exception. This
         // method will catch those exceptions and respond accordingly.
